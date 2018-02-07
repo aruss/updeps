@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <PackageId>ServiceBase</PackageId>
+    <PackageVersion>$(VersionSuffix)</PackageVersion>
+    <Authors>Russlan Akiev</Authors>
+    <Description>Common bits and parts for building web services</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <Copyright>Copyright (c) Russlan Akiev. All rights reserved.</Copyright>
+    <PackageTags>dotnet dotnet-core</PackageTags>
+    <RepositoryUrl></RepositoryUrl>
+    <RepositoryType></RepositoryType>
+    <PackageProjectUrl>https://github.com/aruss/ServiceBase</PackageProjectUrl>
+    <PackageLicenseUrl></PackageLicenseUrl>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <Company />
+    <Product>ServiceBase</Product>
+    <Version>1.1.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Multitenancy\**" />
+    <EmbeddedResource Remove="Multitenancy\**" />
+    <None Remove="Multitenancy\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ServiceBase.nuspec" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.0.0" />
+  </ItemGroup>
+
+</Project>
